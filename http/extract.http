@@ -8,9 +8,25 @@ POST {{HOST}}/extract
 Content-Type: application/json
 
 {
-    "model": "lama",
-    "attributes": [
-        "color"
-    ],
-    "content": "This shirt is blue."
+    "model": "camellm",
+    "tasks": [
+        {
+            "ctx": {
+                "Titre": "Baignoire d'angle Geberit Bastia: 142x142cm",
+                "Description": "BAIG ANGL BASTIA 142X142",
+                "LIBL_LIBELLE": "Baignoire d'angle Geberit Bastia avec pieds: 142x142cm",
+                "Argumentaire Produit": "Poignes en option"
+            },
+            "fields_to_extract": [
+                "EF000040",
+                "EF000008",
+                "EF001438",
+                "EF001257",
+                "EF000010",
+                "EF024897",
+                "EF000007",
+                "EF002169"
+            ]
+        }
+    ]
 }
