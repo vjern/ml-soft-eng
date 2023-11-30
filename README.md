@@ -1,6 +1,6 @@
-# LLM Attribute Extraction API
+# LLM Field Extraction API
 
-Extract attributes from product descriptions using a (mocked) LLM.
+Extract fields from product descriptions using a (mocked) LLM.
 
 ## Build & Run
 
@@ -28,7 +28,7 @@ Check that your container is live by visiting http://localhost:8080.
 GET /
 ```
 
-### Extract attributes
+### Extract fields
 
 ```htt
 POST /extract
