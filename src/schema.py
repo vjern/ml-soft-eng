@@ -1,3 +1,5 @@
+from typing import Optional
+
 from pydantic import BaseModel
 
 from extractor import Models
@@ -9,7 +11,9 @@ class ExtractionTask(BaseModel):
 
 
 class ExtractionResult(BaseModel):
-    fields: dict[str, str]
+    field_name: str
+    field_value: str
+    prompt: Optional[list[str]]
     product_description: str
 
 

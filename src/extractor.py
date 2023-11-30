@@ -86,14 +86,19 @@ Attribute: {attribute}
         return prompt
 
     def extract(
-        self, product_description: str, field_id: str, nb_examples: int = 3
-    ) -> str:
+        self, product_description: str, field_id: str, nb_examples: int = 3,
+    ) -> tuple[str, str]:
+        """
+        Extract a given field (referenced by its id) from a product description.
+        Using a list of field examples, we also allow adding a number of examples
+        to the prompt for the LLM to draw from.
+        """
         prompt = self.build_prompt(product_description, field_id, nb_examples)
         if len(prompt) > self.prompt_max_size:
             raise Exception(
                 f"Model {self.__class__.__name!r} prompt max size is {self.prompt_max_size}, got {len(prompt)}"
             )
-        return self.send_prompt(prompt)
+        return self.send_prompt(prompt), prompt.strip()
 
 
 def get_extractor(model: Models) -> Extractor:
