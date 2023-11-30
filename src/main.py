@@ -52,7 +52,7 @@ def post_extract(req: Request, body: PostExtract.Request) -> PostExtract.Respons
         for field_id in product.fields_to_extract
     )
 
-    executor = ThreadPoolExecutor()
+    executor = ThreadPoolExecutor(max_workers=50)
     results = executor.map(
         partial(repack_result, extractor, with_prompt=with_prompt),
         split_tasks,
