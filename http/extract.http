@@ -3,7 +3,6 @@
 GET {{HOST}}
 
 ### Minimal example (1 product, 1 field)
-
 POST {{HOST}}/extract
 Content-Type: application/json
 X-Debug-Show-Prompts:
@@ -21,7 +20,6 @@ X-Debug-Show-Prompts:
 }
 
 ### Multiple products
-
 POST {{HOST}}/extract
 Content-Type: application/json
 # X-Debug-Show-Prompts:
