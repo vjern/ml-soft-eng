@@ -64,7 +64,7 @@ Content-Type: application/json
     "model": "camellm",
     "products": [
         {
-            "product_description": "Lave linge 142x142cm",
+            "description": "Lave linge 142x142cm",
             "fields_to_extract": [
                 "EF000040", "EF000008"
             ]
