@@ -78,6 +78,7 @@ Attribute: {attribute}
                 attribute=field_meta.label,
             )
         )
+        user_message_parts.append("Answer: ")
 
         prompt = self.prompt_template.format(
             system_prompt=SYSTEM_PROMPT,
