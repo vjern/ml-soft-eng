@@ -7,6 +7,7 @@ from fastapi import FastAPI, Request
 from schema import PostExtract, ExtractionResult
 from extractor import get_extractor, Extractor
 
+
 DEBUG_HEADER_SHOW_PROMPTS = "X-Debug-Show-Prompts"
 
 logging.getLogger().setLevel(logging.INFO)
@@ -27,7 +28,7 @@ def repack_result(
     """
     Adapt to ThreadPoolExecutor.map to
     - properly unpack the atomic task args (product desc and id of field to extract)
-    - rebuild a
+    - rebuild a result object that includes the prompt if the debug header is provided
     """
     desc, field_id = args
     field_value, prompt = extractor.extract(desc, field_id)
@@ -41,7 +42,7 @@ def repack_result(
 
 @app.post("/extract")
 def post_extract(req: Request, body: PostExtract.Request) -> PostExtract.Response:
-    # identify extractor
+    # Identify the extractor to use
     extractor = get_extractor(body.model)
     logger.info(f"{extractor = }")
     # We allow a debug header to be passed in to also return the generated prompts

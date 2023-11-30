@@ -23,6 +23,13 @@ class Models(Enum):
 
 
 class Extractor:
+    """
+    A class that is responsible for:
+    - prompt building (using templates that children classes can change)
+    - sending the prompt to the related LLM
+    - returning the field value extracted by the LLM
+    """
+
     prompt_max_size: int = -1
     prompt_template: str = "{system_prompt} {user_message}"
     entry_template: str = """
@@ -32,7 +39,8 @@ Attribute: {attribute}
 
     def send_prompt(self, prompt: str) -> str:
         """
-        Return placeholder
+        This method would typically call the LLM or the service hosting it;
+        Instead we return a placeholder for the sake of the exercise.
         """
         # Emulate latency in LLM response
         time.sleep(2)
@@ -44,19 +52,28 @@ Attribute: {attribute}
         field_id: str,
         nb_examples: int = 3,
     ) -> str:
+        """
+        Build a prompt for a given description and field to extract from it.
+        Also include (at most `nb_examples`) examples for this specific field so the LLM has more context.
+        """
+
+        # Retrieve field meta and check that it does exist
         field_meta = FIELD_METAS.get(field_id)
         if field_meta is None:
             raise RuntimeError("No such extraction field: %s" % field_id)
+
+        # Retrieve examples for it
         available_examples = FIELD_EXAMPLES[field_id]
 
-        user_message_parts = []
+        # Gradually build the prompt
+        user_message_rows = []
 
+        # If examples are to be included, sample as many as available and requested
         if nb_examples > 0:
             examples = random.choices(
                 available_examples, k=min(len(available_examples), nb_examples)
             )
             for example in examples:
-                print(f"{example = }")
                 example_prompt_parts = [
                     ENTRY_TEMPLATE.format(
                         product_description=example.product_description,
@@ -68,23 +85,22 @@ Attribute: {attribute}
                         "Options: " + ", ".join(field_meta.options)
                     )
                 example_prompt_parts.append("Answer: " + example.output)
-                print(f"{ example_prompt_parts = }")
-                user_message_parts.append("\n".join(example_prompt_parts))
-                user_message_parts.append("")
+                user_message_rows.append("\n".join(example_prompt_parts))
+                user_message_rows.append("")
 
-        user_message_parts.append(
+        # Finally, add the product for which we want the field's value
+        user_message_rows.append(
             ENTRY_TEMPLATE.format(
                 product_description=product_description,
                 attribute=field_meta.label,
             )
         )
-        user_message_parts.append("Answer: ")
+        user_message_rows.append("Answer: ")
 
-        prompt = self.prompt_template.format(
+        return self.prompt_template.format(
             system_prompt=SYSTEM_PROMPT,
-            user_message="\n".join(user_message_parts).strip(),
+            user_message="\n".join(user_message_rows).strip(),
         )
-        return prompt
 
     def extract(
         self,
@@ -103,14 +119,6 @@ Attribute: {attribute}
                 f"Model {self.__class__.__name!r} prompt max size is {self.prompt_max_size}, got {len(prompt)}"
             )
         return self.send_prompt(prompt), prompt.strip()
-
-
-def get_extractor(model: Models) -> Extractor:
-    cls = {
-        Models.CameLLM: Camell,
-        Models.LLaMA: LLaMA,
-    }[model]
-    return cls()
 
 
 class LLaMA(Extractor):
@@ -133,3 +141,14 @@ class Camell(Extractor):
 ### User Message
 {user_message}
 """
+
+
+_enum_to_class = {
+    Models.CameLLM: Camell,
+    Models.LLaMA: LLaMA,
+}
+
+
+def get_extractor(model: Models) -> Extractor:
+    cls = _enum_to_class[model]
+    return cls()

@@ -4,6 +4,11 @@ from typing import Optional
 from collections import defaultdict
 
 
+"""
+Loading utilities and schemas for extraction field metadata & examples
+"""
+
+
 @dataclass
 class Field:
     name: str
@@ -40,6 +45,7 @@ def examples_from_json(
                 coll[example["field_name"]].append(
                     Example(
                         output=example["field_value"],
+                        # We make the choice to use this property as the main description of the product
                         product_description=example["LIBL_LIBELLE"],
                     )
                 )
