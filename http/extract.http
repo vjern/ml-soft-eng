@@ -8,15 +8,10 @@ POST {{HOST}}/extract
 Content-Type: application/json
 
 {
-    "model": "camellm",
+    "model": "llama",
     "tasks": [
         {
-            "ctx": {
-                "Titre": "Baignoire d'angle Geberit Bastia: 142x142cm",
-                "Description": "BAIG ANGL BASTIA 142X142",
-                "LIBL_LIBELLE": "Baignoire d'angle Geberit Bastia avec pieds: 142x142cm",
-                "Argumentaire Produit": "Poignes en option"
-            },
+            "product_description": "Baignoire d'angle Geberit Bastia avec pieds: 142x142cm",
             "fields_to_extract": [
                 "EF000040",
                 "EF000008",

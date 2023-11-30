@@ -18,6 +18,7 @@ class Field:
 class Example:
     product_description: str
     output: str
+    successful: bool = False
 
 
 def fields_metadata_from_json(path: str) -> dict[str, Field]:
@@ -28,14 +29,15 @@ def fields_metadata_from_json(path: str) -> dict[str, Field]:
     return registry
 
 
-def examples_from_json(path: str) -> dict[str, list[Example]]:
+def examples_from_json(path: str, include_all: bool = False) -> dict[str, list[Example]]:
     coll = defaultdict(list)
     with open(path) as f:
         for example in json.load(f):
-            coll[example['field_name']].append(
-                Example(
-                    output=example['field_value'],
-                    product_description=example['LIBL_LIBELLE'],
+            if include_all or example['field_value'] is not None:
+                coll[example['field_name']].append(
+                    Example(
+                        output=example['field_value'],
+                        product_description=example['LIBL_LIBELLE'],
+                    )
                 )
-            )
     return coll
