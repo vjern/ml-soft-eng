@@ -84,25 +84,25 @@ When building a prompt to extract field `f_id` from a product description, we sa
 <summary> Example prompt </summary>
 
 ```
-<s>### System prompt
+<s>[INST] <<SYS>>
 Tu es un assistant qui m'aide à extraire des valeurs depuis un produit.
+<</SYS>>
 
-### User Message
 Product description: Radiateur eau chaude REGGANE 3000 STANDARD Type 22S, horizontal blanc, hauteur 400mm , largeur 2700mm, puissance   3493,8 W
 Attribute: hauteur (cm)
 Answer: 400
 
-Product description: Radiateur sèche-serviettes ACOVA Fassane Spa Asymétrique Electrique +Air, collecteur à droite, commande infrarouge IRS + soufflant 1000W, puissance 750W, hauteur 1248 mm, largeur 550 mm, Blanc RAL 9016
+Product description: Regg. 3010 Int. 11KV 900x1000, Puissance 1292W (Blanc: RAL9016)
 Attribute: hauteur (cm)
-Answer: 1248
+Answer: 900
 
-Product description: Radiateur sèche-serviettes ACOVA Fassane Spa Asymétrique Electrique +Air, collecteur à droite, commande infrarouge IRS + soufflant 1000W, puissance 750W, hauteur 1248 mm, largeur 550 mm, Blanc RAL 9016
+Product description: Série 500 Réfrigérateur Combiné Encastrable niche 1780 mm (L : 546 mm)-Classe E-Froid statique & Congélateur Low Frost - Bac à légumes avec contrôle d`humidité-Compartiment basse température-4 clayettes-Installation glissières - 34dB -Blanc
 Attribute: hauteur (cm)
-Answer: 1248
+Answer: 1780
 
 Product description: Baignoire d'angle Geberit Bastia avec pieds: 142x142cm
 Attribute: hauteur (cm)
-Answer:
+Answer: [/INST]
 ```
 
 </details>

@@ -70,7 +70,7 @@ Attribute: {attribute}
 
         # If examples are to be included, sample as many as available and requested
         if nb_examples > 0:
-            examples = random.choices(
+            examples = random.sample(
                 available_examples, k=min(len(available_examples), nb_examples)
             )
             for example in examples:
