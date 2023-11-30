@@ -2,6 +2,13 @@
 
 Extract fields from product descriptions using a (mocked) LLM.
 
+## Available features
+
+1. You can summon either model (`camellm` or `llama` as defined [here](https://github.com/vjern/ml-soft-eng/blob/master/src/extractor.py#L20)) with the `POST /extract` endpoint;
+2. You can provide multiple products to extract from (each with its own `fields_to_extract` list);
+3. Prompt generation using the model's prompt template and inclusion of examples by drawing from `examples.json`;
+4. Extraction tasks (1 description + 1 field) are parallelised using a thread pool (supposing we are actually hitting another service hosting the LLM).
+
 ## Repo structure
 
 All code is in `src` and assumes it to be the working directory of the API.
