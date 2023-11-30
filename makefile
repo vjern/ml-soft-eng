@@ -21,3 +21,7 @@ kill:
 logs:
 	LATEST_CONTAINER=$$(docker ps -a | grep -w $(IMAGE) | head -n 1 | cut -d' ' -f1)
 	docker logs $$LATEST_CONTAINER
+
+live:
+	cd src
+	python -m uvicorn --port 8080 main:app --reload

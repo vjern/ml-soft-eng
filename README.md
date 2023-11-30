@@ -27,6 +27,12 @@ make logs # to show the full logs
 make kill # stop the container
 ```
 
+Or you can run the API directly with live reload (requires a virtual env):
+
+```sh
+make live
+```
+
 Then you can hit the following endpoints:
 
 ## Endpoints
