@@ -1,0 +1,71 @@
+[
+  {
+    "Titre": "Baignoire d'angle Geberit Bastia: 142x142cm",
+    "Description": "BAIG ANGL BASTIA 142X142",
+    "LIBL_LIBELLE": "Baignoire d'angle Geberit Bastia avec pieds: 142x142cm",
+    "Argumentaire Produit": "Poignes en option",
+    "fields_to_extract": [
+      "EF000040",
+      "EF000008",
+      "EF001438",
+      "EF001257",
+      "EF000010",
+      "EF024897",
+      "EF000007",
+      "EF002169"
+    ]
+  },
+  {
+    "Titre": "Radiateur Chaleur douce Equateur 3 horizontal gris ardoise 1000W",
+    "Description": "EQUATEUR 3 H 1000W ARDOISE",
+    "LIBL_LIBELLE": "Radiateur Connecté - Equateur 3 horizontal gris ardoise 1000W",
+    "Argumentaire Produit": "Le radiateur connecté avec un double système chauffant pour un confort absolu",
+    "fields_to_extract": [
+      "EF004900",
+      "EF000167",
+      "EF000955",
+      "EF000256",
+      "EF001471",
+      "EF000670",
+      "EF000008",
+      "EF000007",
+      "EF000040",
+      "EF000004",
+      "EF000049",
+      "EF005474",
+      "EF000010",
+      "EF000483"
+    ]
+  },
+  {
+    "Titre": "Cascade receveur ultra plat en céramique,120x90cm, blanc VitrA Antislip",
+    "Description": "CASCADE RECEVEUR ULTRA PLAT EN CERAMIQUE,120X90CM, BLANC VIT",
+    "LIBL_LIBELLE": "Cascade receveur ultra plat en céramique,120x90cm, à poser/encastrer, blanc VitrA Antislip, classification antidérapant PN24, bonde ø 90 mm, sans système d`écoulement. Important: Un decaissement dans le sol est nécessaire!",
+    "Argumentaire Produit": "-",
+    "fields_to_extract": [
+      "EF024897",
+      "EF000007",
+      "EF000040",
+      "EF002169",
+      "EF000008",
+      "EF001438",
+      "EF001257",
+      "EF000010"
+    ]
+  },
+  {
+    "Titre": "INC - Standard 60X103 12V 40W E27",
+    "Description": "INC - STANDARD 60X103 12V 40W E27",
+    "LIBL_LIBELLE": "Lampe incandescente forme Standard 60X103 12V 40W E27",
+    "Argumentaire Produit": "Lampes incandescentes standard 60 x 103 mm, culot E27 et B22 selon modèle. Puissances variées",
+    "fields_to_extract": [
+      "EF000007",
+      "EF000035",
+      "EF000369",
+      "EF000010",
+      "EF000042",
+      "EF000758",
+      "EF000551"
+    ]
+  }
+]

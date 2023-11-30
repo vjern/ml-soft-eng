@@ -1,0 +1,1020 @@
+[
+    {
+        "name": "EF005364",
+        "multiple": false,
+        "label": "Type de sechage",
+        "options": [
+            "condensation",
+            "air sortant"
+        ],
+        "type": "select"
+    },
+    {
+        "name": "EF000347",
+        "multiple": false,
+        "label": "Commande",
+        "options": [
+            "interrupteur temporis\u00e9",
+            "interrupteur de proximit\u00e9 infrarouge",
+            "sans",
+            "circuit"
+        ],
+        "type": "select"
+    },
+    {
+        "name": "EF000215",
+        "multiple": false,
+        "label": "type d'accessoire/piece detachee",
+        "options": [
+            "t\u00eate de gonflage",
+            "jeu de paliers de pompe",
+            "jeu de paliers de moteur",
+            "outil",
+            "r\u00e9servoir",
+            "vanne",
+            "roue h\u00e9lice",
+            "axe",
+            "kit de r\u00e9vision",
+            "jeu de joints toriques",
+            "pi\u00e8ce de montage",
+            "ch\u00e2ssis de base",
+            "dispositif de levage",
+            "documentation",
+            "fixations",
+            "ensemble de joints",
+            "pi\u00e8ce de connexion",
+            "\u00e9trier",
+            "filtre",
+            "support",
+            "membrane",
+            "diaphragme",
+            "tube",
+            "tuyau",
+            "isolation",
+            "kit de montage",
+            "couvercle",
+            "coupleur",
+            "autre",
+            "bride"
+        ],
+        "type": "select"
+    },
+    {
+        "name": "EF000008",
+        "multiple": false,
+        "qa_pipeline": "generative",
+        "label": "largeur (cm)",
+        "type": "number"
+    },
+    {
+        "name": "EF006009",
+        "multiple": false,
+        "label": "Avec materiau de fixation",
+        "options": [
+            "oui",
+            "non"
+        ],
+        "type": "boolean"
+    },
+    {
+        "name": "EF000048",
+        "multiple": false,
+        "label": "douille",
+        "options": [
+            "GX24q-4",
+            "GX24q-3",
+            "GX24q-2",
+            "GX24q-1",
+            "G24q-3",
+            "G24q-2",
+            "G24q-1",
+            "GX24d-1",
+            "GX8,5",
+            "PGJ5",
+            "GX53",
+            "GX10",
+            "RX7",
+            "G8,5",
+            "GZ10",
+            "G6,35",
+            "GR8",
+            "W4,3",
+            "2G13",
+            "G10q",
+            "GU10",
+            "Fc2",
+            "G5",
+            "G11",
+            "G13",
+            "PG12-1",
+            "sans",
+            "S14d",
+            "S14s",
+            "BA9s",
+            "PG12-2",
+            "G24d-3",
+            "G24d-2",
+            "G24d-1",
+            "2G7",
+            "2G10",
+            "2G11",
+            "G23",
+            "GX24d-3",
+            "GX24d-2",
+            "GU4",
+            "RX7s-24",
+            "RX7s",
+            "R7s",
+            "PG12",
+            "autre",
+            "GZ4",
+            "GY6,35",
+            "GX5,3",
+            "GU5,3",
+            "G53",
+            "G4",
+            "G12",
+            "Fa4",
+            "E40",
+            "E27",
+            "E14",
+            "E10",
+            "B22d",
+            "B15d"
+        ],
+        "type": "select"
+    },
+    {
+        "name": "EF000040",
+        "multiple": false,
+        "qa_pipeline": "generative",
+        "label": "hauteur (cm)",
+        "type": "number"
+    },
+    {
+        "name": "EF000230",
+        "multiple": false,
+        "label": "Type de construction",
+        "options": [
+            "mod\u00e8le en soubassement",
+            "\u00e9cran plat",
+            "chemin\u00e9e murale",
+            "t\u00e9lescope",
+            "hotte \u00eelot",
+            "extraction",
+            "int\u00e9gr\u00e9",
+            "autre",
+            "encastr\u00e9"
+        ],
+        "type": "select"
+    },
+    {
+        "name": "EF001364",
+        "multiple": false,
+        "qa_pipeline": "generative",
+        "label": "puissance de fonctionnement nominale, AC-3, 400 V (kW)",
+        "type": "number"
+    },
+    {
+        "name": "EF024897",
+        "multiple": false,
+        "label": "Degre de brillance",
+        "options": [
+            "satin\u00e9",
+            "tr\u00e8s brillant",
+            "autre",
+            "mat"
+        ],
+        "type": "select"
+    },
+    {
+        "name": "EF003628",
+        "multiple": false,
+        "label": "protocole d'image",
+        "options": [
+            "PAL",
+            "NTSC",
+            "autre"
+        ],
+        "type": "select"
+    },
+    {
+        "name": "EF001393",
+        "multiple": false,
+        "qa_pipeline": "generative",
+        "label": "courant de fonctionnement nominal CA-1, 400 V (A)",
+        "type": "number"
+    },
+    {
+        "name": "EF000443",
+        "multiple": false,
+        "label": "Raccordement",
+        "options": [
+            "autre",
+            "RJ45 8(8)"
+        ],
+        "type": "select"
+    },
+    {
+        "name": "EF000483",
+        "multiple": false,
+        "label": "avec telecommande",
+        "options": [
+            "oui",
+            "non"
+        ],
+        "type": "boolean"
+    },
+    {
+        "name": "EF004574",
+        "multiple": false,
+        "label": "Type de bus/interface",
+        "options": [
+            "Cardbus",
+            "USB",
+            "PCMCIA",
+            "PCI",
+            "ISA",
+            "de s\u00e9rie",
+            "Ethernet",
+            "autre"
+        ],
+        "type": "select"
+    },
+    {
+        "name": "EF000167",
+        "multiple": false,
+        "qa_pipeline": "generative",
+        "label": "poids (g)",
+        "type": "number"
+    },
+    {
+        "name": "EF000007",
+        "multiple": false,
+        "label": "Couleur",
+        "options": [
+            "beige",
+            "gris",
+            "blanc",
+            "autre"
+        ],
+        "type": "select"
+    },
+    {
+        "name": "EF002169",
+        "multiple": false,
+        "label": "Materiau",
+        "options": [
+            "c\u00e9ramique",
+            "pierre naturelle",
+            "verre",
+            "acier",
+            "acier inoxydable",
+            "autre",
+            "plastique",
+            "bois",
+            "fonte",
+            "b\u00e9ton",
+            "aluminium"
+        ],
+        "type": "select"
+    },
+    {
+        "name": "EF000042",
+        "multiple": false,
+        "label": "culot",
+        "options": [
+            "G24q",
+            "G24d",
+            "MG",
+            "BA10s",
+            "S19",
+            "G24q-4",
+            "G24q-3",
+            "G24q-2",
+            "G24q-1",
+            "E39",
+            "GX8,5",
+            "GX53",
+            "T 6,8G",
+            "T 6,5F",
+            "S8,5",
+            "Rigid loop",
+            "PSB",
+            "MF",
+            "E5/8",
+            "E26",
+            "E11",
+            "T 5,5",
+            "T 4,5",
+            "BA5s",
+            "T 5,5K",
+            "T 4,6",
+            "G9",
+            "BA15s",
+            "W2,1x9.5d",
+            "F9",
+            "BAY15d",
+            "S15s",
+            "E12",
+            "BA7s",
+            "G10q",
+            "GU10",
+            "borne \u00e0 vis",
+            "G5",
+            "G13",
+            "W2x4,6d",
+            "S14d",
+            "S14s",
+            "BA9s",
+            "G24d-3",
+            "G24d-2",
+            "G24d-1",
+            "2G11",
+            "G23",
+            "BA15d",
+            "GU4",
+            "R7s",
+            "autre",
+            "GX5,3",
+            "GX16d",
+            "GU5,3",
+            "G53",
+            "G4",
+            "E40",
+            "E27",
+            "E14",
+            "E10",
+            "B22d",
+            "B15d"
+        ],
+        "type": "select"
+    },
+    {
+        "name": "EF001257",
+        "multiple": false,
+        "label": "Qualite du materiau",
+        "options": [
+            "PVDF",
+            "acier inoxydable, autre",
+            "acier inoxydable (V4A)",
+            "acier inoxydable (V4A)",
+            "TPE",
+            "polypropyl\u00e8ne",
+            "polystyr\u00e8ne",
+            "polycarbonate",
+            "zinc coul\u00e9 sous pression",
+            "polyamide",
+            "acier",
+            "PE",
+            "autre",
+            "laiton",
+            "fer",
+            "aluminium"
+        ],
+        "type": "select"
+    },
+    {
+        "name": "EF022726",
+        "multiple": false,
+        "label": "Raccordement filete",
+        "options": [
+            "filetage ext\u00e9rieur conique (NPT)",
+            "filetage ext\u00e9rieur m\u00e9trique",
+            "filetage ext\u00e9rieur, pour gaz, cylindrique (BSPP)",
+            "filetage ext\u00e9rieur, pour gaz, conique (BSPT)",
+            "filetage int\u00e9rieur conique (NPT)",
+            "filetage int\u00e9rieur m\u00e9trique",
+            "filetage int\u00e9rieur, pour gaz, cylindrique (BSPT)",
+            "pas de vis int\u00e9rieur, pour gaz, conique (BSPT)",
+            "filetage int\u00e9rieur cylindrique BSPT-Rp (ISO 7-1 / EN 10226-1)",
+            "autre"
+        ],
+        "type": "select"
+    },
+    {
+        "name": "EF002749",
+        "multiple": false,
+        "label": "Couleur de calotte",
+        "options": [
+            "incolore",
+            "ambre/ambre jaune",
+            "vert/clair",
+            "orange",
+            "vert",
+            "jaune",
+            "rouge",
+            "blanc",
+            "autre",
+            "bleu"
+        ],
+        "type": "select"
+    },
+    {
+        "name": "EF000010",
+        "multiple": false,
+        "label": "modele",
+        "options": [
+            "2x 431a",
+            "1x 431a",
+            "VDo 4 p\u00f4les",
+            "VDo 2x4 p\u00f4les",
+            "UAE/TAE 8(6)/6 NF",
+            "TAE 6 NF",
+            "TAE 3x6 NFN",
+            "TAE 2x6/6 NFF",
+            "ADo 8",
+            "ADo 4",
+            "RJ12 6(6)",
+            "autre",
+            "RJ11 6(4)"
+        ],
+        "type": "select"
+    },
+    {
+        "name": "EF001392",
+        "multiple": false,
+        "qa_pipeline": "generative",
+        "label": "courant de fonctionnement nominal CA-3, 400 V (A)",
+        "type": "number"
+    },
+    {
+        "name": "EF020449",
+        "multiple": false,
+        "qa_pipeline": "generative",
+        "label": "pression de travail max. (bar)",
+        "type": "number"
+    },
+    {
+        "name": "EF001438",
+        "multiple": false,
+        "qa_pipeline": "generative",
+        "label": "longueur (cm)",
+        "type": "number"
+    },
+    {
+        "name": "EF001377",
+        "multiple": false,
+        "qa_pipeline": "generative",
+        "label": "Nombre de contacts auxiliaires a ouverture",
+        "type": "number"
+    },
+    {
+        "name": "EF004293",
+        "multiple": false,
+        "label": "Indice de protection contre les chocs (IK)",
+        "options": [
+            "> IK10",
+            "IK00",
+            "IK10",
+            "IK09",
+            "IK08",
+            "IK07",
+            "IK06",
+            "IK05",
+            "IK04",
+            "IK03",
+            "IK02",
+            "IK01",
+            "sans",
+            "autre"
+        ],
+        "type": "select"
+    },
+    {
+        "name": "EF000758",
+        "multiple": false,
+        "label": "classe d'efficience energetique",
+        "options": [
+            "A+++",
+            "A++",
+            "A+",
+            "G",
+            "A",
+            "E",
+            "D",
+            "F",
+            "C",
+            "B"
+        ],
+        "type": "select"
+    },
+    {
+        "name": "EF000049",
+        "multiple": false,
+        "qa_pipeline": "generative",
+        "label": "profondeur (mm)",
+        "type": "number"
+    },
+    {
+        "name": "EF000458",
+        "multiple": false,
+        "label": "Avec affichage",
+        "options": [
+            "oui",
+            "non"
+        ],
+        "type": "boolean"
+    },
+    {
+        "name": "EF000551",
+        "multiple": false,
+        "qa_pipeline": "generative",
+        "label": "diametre (cm)",
+        "type": "number"
+    },
+    {
+        "name": "EF021299",
+        "multiple": false,
+        "qa_pipeline": "generative",
+        "label": "puissance nominale max. ventilateur(s) (kW)",
+        "type": "number"
+    },
+    {
+        "name": "EF005366",
+        "multiple": false,
+        "qa_pipeline": "generative",
+        "label": "volume du tambour (l)",
+        "type": "number"
+    },
+    {
+        "name": "EF000116",
+        "multiple": false,
+        "qa_pipeline": "generative",
+        "label": "Numero RAL",
+        "type": "number"
+    },
+    {
+        "name": "EF000769",
+        "multiple": false,
+        "qa_pipeline": "generative",
+        "label": "capacite utile du freezer (l)",
+        "type": "number"
+    },
+    {
+        "name": "EF001274",
+        "multiple": false,
+        "qa_pipeline": "generative",
+        "label": "Nombre de tubes",
+        "type": "number"
+    },
+    {
+        "name": "EF003961",
+        "multiple": false,
+        "label": "Finition du raccordement electrique",
+        "options": [
+            "connecteur de vanne",
+            "connecteur M8",
+            "connecteur M12",
+            "connecteur 7/8 pouce",
+            "connecteur 3/4 pouce",
+            "connecteur 1/2 pouce",
+            "prise radiale",
+            "prise axiale",
+            "c\u00e2ble radial",
+            "c\u00e2ble avec connecteur",
+            "c\u00e2ble axial",
+            "capot bus",
+            "raccordement par soudure",
+            "raccordement par perforation",
+            "raccordement par cosse \u00e0 souder",
+            "raccordement par clip",
+            "connexion enroul\u00e9e",
+            "raccordement par borne \u00e0 ressort",
+            "raccordement autod\u00e9nudant",
+            "raccordement par fiche plate",
+            "connexion circuit imprim\u00e9",
+            "borne \u00e0 vis",
+            "fiche",
+            "autre",
+            "borne",
+            "c\u00e2ble"
+        ],
+        "type": "select"
+    },
+    {
+        "name": "EF001993",
+        "multiple": false,
+        "qa_pipeline": "generative",
+        "label": "nombre de sorties numeriques",
+        "type": "number"
+    },
+    {
+        "name": "EF007829",
+        "multiple": false,
+        "qa_pipeline": "generative",
+        "label": "emission du bruit (dB(A) re 1 pW)",
+        "type": "number"
+    },
+    {
+        "name": "EF000767",
+        "multiple": false,
+        "label": "Type de construction",
+        "options": [
+            "rond",
+            "autre",
+            "angulaire"
+        ],
+        "type": "select"
+    },
+    {
+        "name": "EF008002",
+        "multiple": false,
+        "qa_pipeline": "generative",
+        "label": "capacite utile (l)",
+        "type": "number"
+    },
+    {
+        "name": "EF011959",
+        "multiple": false,
+        "label": "Degre de protection (NEMA)",
+        "options": [
+            "13",
+            "6P",
+            "4X",
+            "3R",
+            "12",
+            "6",
+            "2",
+            "1",
+            "autre",
+            "4",
+            "3"
+        ],
+        "type": "select"
+    },
+    {
+        "name": "EF022694",
+        "multiple": false,
+        "label": "Dimension du filetage",
+        "options": [
+            "24 mm",
+            "14 mm",
+            "18 mm",
+            "28 mm",
+            "8 mm",
+            "22 mm",
+            "12 mm",
+            "15 mm",
+            "2 3/4 pouces",
+            "1/8 pouce",
+            "20 mm",
+            "16 mm",
+            "4 pouces",
+            "2 1/2 pouces",
+            "1/4 pouce",
+            "10 mm",
+            "3 pouces",
+            "2 pouces",
+            "1 1/2 pouces",
+            "1/2 pouce",
+            "1 1/4 pouce",
+            "1 pouce",
+            "3/4 pouce",
+            "3/8 pouce",
+            "6 mm",
+            "autre"
+        ],
+        "type": "select"
+    },
+    {
+        "name": "EF000955",
+        "multiple": false,
+        "label": "convient pour un usage domotique",
+        "options": [
+            "oui",
+            "non"
+        ],
+        "type": "boolean"
+    },
+    {
+        "name": "EF001139",
+        "multiple": false,
+        "label": "Type",
+        "options": [
+            "bifurcation parall\u00e8le",
+            "branchement double",
+            "branchement traversant",
+            "branchement Y",
+            "branchement en T",
+            "autre"
+        ],
+        "type": "select"
+    },
+    {
+        "name": "EF006331",
+        "multiple": false,
+        "label": "Protection contre le vandalisme",
+        "options": [
+            "oui",
+            "non"
+        ],
+        "type": "boolean"
+    },
+    {
+        "name": "EF006342",
+        "multiple": false,
+        "qa_pipeline": "generative",
+        "label": "puissance d'entree max. chauffage (W)",
+        "type": "number"
+    },
+    {
+        "name": "EF000143",
+        "multiple": false,
+        "label": "type de courant",
+        "options": [
+            "AC/CC",
+            "CC",
+            "AC"
+        ],
+        "type": "select"
+    },
+    {
+        "name": "EF007736",
+        "multiple": false,
+        "label": "Propriete du systeme d'image",
+        "options": [
+            "noir/blanc",
+            "infrarouge",
+            "couleur"
+        ],
+        "type": "select"
+    },
+    {
+        "name": "EF001376",
+        "multiple": false,
+        "qa_pipeline": "generative",
+        "label": "Nombre de contacts auxiliaires a fermeture",
+        "type": "number"
+    },
+    {
+        "name": "EF000004",
+        "multiple": false,
+        "label": "classe de protection",
+        "options": [
+            "classe 5",
+            "classe 4",
+            "classe 3",
+            "classe 2",
+            "classe 1",
+            "autre"
+        ],
+        "type": "select"
+    },
+    {
+        "name": "EF000301",
+        "multiple": false,
+        "label": "Pivotant",
+        "options": [
+            "oui",
+            "non"
+        ],
+        "type": "boolean"
+    },
+    {
+        "name": "EF003271",
+        "multiple": false,
+        "qa_pipeline": "generative",
+        "label": "Taux de transmission (kBit/s)",
+        "type": "number"
+    },
+    {
+        "name": "EF024605",
+        "multiple": false,
+        "qa_pipeline": "generative",
+        "label": "emission de chaleur selon EN 442 20 degC - 75/65 (W)",
+        "type": "number"
+    },
+    {
+        "name": "EF001374",
+        "multiple": false,
+        "qa_pipeline": "generative",
+        "label": "nombre de contacts a fermeture en tant que contacts principaux",
+        "type": "number"
+    },
+    {
+        "name": "EF002196",
+        "multiple": false,
+        "label": "avec ventilateur",
+        "options": [
+            "oui",
+            "non"
+        ],
+        "type": "boolean"
+    },
+    {
+        "name": "EF000587",
+        "multiple": false,
+        "qa_pipeline": "generative",
+        "label": "consommation d'electricite (A)",
+        "type": "number"
+    },
+    {
+        "name": "EF025035",
+        "multiple": false,
+        "label": "type de conduite de refroidissement",
+        "options": [
+            "2 x d\u00e9tach\u00e9s",
+            "double"
+        ],
+        "type": "select"
+    },
+    {
+        "name": "EF001471",
+        "multiple": false,
+        "label": "Affichage numerique",
+        "options": [
+            "oui",
+            "non"
+        ],
+        "type": "boolean"
+    },
+    {
+        "name": "EF000256",
+        "multiple": false,
+        "label": "Avec minuterie",
+        "options": [
+            "oui",
+            "non"
+        ],
+        "type": "boolean"
+    },
+    {
+        "name": "EF002045",
+        "multiple": false,
+        "qa_pipeline": "generative",
+        "label": "capacite de memoire (GB)",
+        "type": "number"
+    },
+    {
+        "name": "EF004900",
+        "multiple": false,
+        "label": "auto-apprentissage",
+        "options": [
+            "oui",
+            "non"
+        ],
+        "type": "boolean"
+    },
+    {
+        "name": "EF005474",
+        "multiple": false,
+        "label": "indice de protection (IP)",
+        "options": [
+            "IPX7",
+            "IPX4",
+            "IPX0",
+            "IP68",
+            "IP64",
+            "IP58",
+            "IP57",
+            "IP56",
+            "IP53",
+            "IP52",
+            "IP50",
+            "IP45",
+            "IP43",
+            "IP33",
+            "IP22",
+            "IP12",
+            "IP10",
+            "IP67",
+            "IP66",
+            "IP65",
+            "IP55",
+            "IP54",
+            "IP44",
+            "IP42",
+            "IP41",
+            "IP40",
+            "IP3X",
+            "IP34",
+            "IP32",
+            "IP31",
+            "IP30",
+            "IP2X",
+            "IP24",
+            "IP23",
+            "IP21",
+            "IP20",
+            "IP00",
+            "autre"
+        ],
+        "type": "select"
+    },
+    {
+        "name": "EF000076",
+        "multiple": false,
+        "qa_pipeline": "generative",
+        "label": "puissance (W)",
+        "type": "number"
+    },
+    {
+        "name": "EF023194",
+        "multiple": false,
+        "label": "Diametre nominal",
+        "options": [
+            "38/12",
+            "3/8 - 5/8 pouces",
+            "3/8 - 3/4 pouces",
+            "1/4 - 5/8 pouces",
+            "1/4 - 3/8 pouces",
+            "1/4 - 1/2 pouces",
+            "12/34",
+            "autre"
+        ],
+        "type": "select"
+    },
+    {
+        "name": "EF000369",
+        "multiple": false,
+        "qa_pipeline": "generative",
+        "label": "longueur totale (m)",
+        "type": "number"
+    },
+    {
+        "name": "EF002423",
+        "multiple": false,
+        "label": "source lumineuse",
+        "options": [
+            "lampe \u00e0 vapeur de mercure \u00e0 haute pression",
+            "lampe sodium basse pression",
+            "lampe fluorescente compacte",
+            "lampe sodium haute pression",
+            "lampe aux halog\u00e9nures",
+            "autre",
+            "universel"
+        ],
+        "type": "select"
+    },
+    {
+        "name": "EF000035",
+        "multiple": false,
+        "qa_pipeline": "generative",
+        "label": "puissance de la source lumineuse (W)",
+        "type": "number"
+    },
+    {
+        "name": "EF008752",
+        "multiple": false,
+        "qa_pipeline": "generative",
+        "label": "capacite << coton >> (kg)",
+        "type": "number"
+    },
+    {
+        "name": "EF000002",
+        "multiple": false,
+        "qa_pipeline": "generative",
+        "label": "tension nominale (V)",
+        "type": "number"
+    },
+    {
+        "name": "EF002048",
+        "multiple": false,
+        "qa_pipeline": "generative",
+        "label": "valeur de raccordement (W)",
+        "type": "number"
+    },
+    {
+        "name": "EF001992",
+        "multiple": false,
+        "qa_pipeline": "generative",
+        "label": "nombre d'entrees numeriques",
+        "type": "number"
+    },
+    {
+        "name": "EF000670",
+        "multiple": false,
+        "label": "Regulation de puissance",
+        "options": [
+            "1 niveau",
+            "5 niveaux",
+            "4 niveaux",
+            "3 niveaux",
+            "2 niveaux",
+            "continu",
+            "autre"
+        ],
+        "type": "select"
+    },
+    {
+        "name": "EF001595",
+        "multiple": false,
+        "label": "Type d'appareil",
+        "options": [
+            "avec anneau de support/poign\u00e9e de transport",
+            "dimension 45",
+            "CEE",
+            "informatique",
+            "autre"
+        ],
+        "type": "select"
+    },
+    {
+        "name": "EF008004",
+        "multiple": false,
+        "qa_pipeline": "generative",
+        "label": "capacite utile du compartiment frigorifique (l)",
+        "type": "number"
+    }
+]
