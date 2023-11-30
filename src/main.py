@@ -20,14 +20,14 @@ def liveness():
 
 
 def repack_result(
-        extractor: Extractor,
-        args: tuple[str, str],
-        with_prompt: bool = False,
-    ) -> ExtractionResult:
+    extractor: Extractor,
+    args: tuple[str, str],
+    with_prompt: bool = False,
+) -> ExtractionResult:
     """
     Adapt to ThreadPoolExecutor.map to
     - properly unpack the atomic task args (product desc and id of field to extract)
-    - rebuild a 
+    - rebuild a
     """
     desc, field_id = args
     field_value, prompt = extractor.extract(desc, field_id)

@@ -86,7 +86,10 @@ Attribute: {attribute}
         return prompt
 
     def extract(
-        self, product_description: str, field_id: str, nb_examples: int = 3,
+        self,
+        product_description: str,
+        field_id: str,
+        nb_examples: int = 3,
     ) -> tuple[str, str]:
         """
         Extract a given field (referenced by its id) from a product description.
