@@ -14,7 +14,6 @@ class ExtractionResult(BaseModel):
 
 
 class PostExtract:
-
     class Request(BaseModel):
         model: Models
         tasks: list[ExtractionTask]

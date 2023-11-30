@@ -4,19 +4,22 @@ from enum import Enum
 
 from fields import fields_metadata_from_json, examples_from_json, Field, Example
 
-FIELD_METAS = fields_metadata_from_json('data/fields.json')
-FIELD_EXAMPLES = examples_from_json('data/examples.json')
+FIELD_METAS = fields_metadata_from_json("data/fields.json")
+FIELD_EXAMPLES = examples_from_json("data/examples.json")
 
 
-SYSTEM_PROMPT = "Tu es un assistant qui m'aide à extraire des valeurs depuis un produit."
+SYSTEM_PROMPT = (
+    "Tu es un assistant qui m'aide à extraire des valeurs depuis un produit."
+)
 ENTRY_TEMPLATE = """
 Product description: {product_description}
 Attribute: {attribute}
 """.strip()
 
+
 class Models(Enum):
-    CameLLM = 'camellm'
-    LLaMA = 'llama'
+    CameLLM = "camellm"
+    LLaMA = "llama"
 
 
 class Extractor:
@@ -35,33 +38,46 @@ Attribute: {attribute}
         print(prompt)
         return f"Answer {self.__class__.__name__}"
 
-    def build_prompt(self, product_description: str, field_id: str, nb_examples: int = 3) -> str:
+    def build_prompt(
+        self,
+        product_description: str,
+        field_id: str,
+        nb_examples: int = 3,
+    ) -> str:
         field_meta = FIELD_METAS.get(field_id)
         if field_meta is None:
-            raise RuntimeError('No such extraction field: %s' % field_id)
+            raise RuntimeError("No such extraction field: %s" % field_id)
         available_examples = FIELD_EXAMPLES[field_id]
-    
+
         user_message_parts = []
 
         if nb_examples > 0:
-            examples = random.choices(available_examples, k=min(len(available_examples), nb_examples))
+            examples = random.choices(
+                available_examples, k=min(len(available_examples), nb_examples)
+            )
             for example in examples:
                 print(f"{example = }")
-                example_prompt_parts = [ENTRY_TEMPLATE.format(
-                    product_description=example.product_description,
-                    attribute=field_meta.label,
-                )]
+                example_prompt_parts = [
+                    ENTRY_TEMPLATE.format(
+                        product_description=example.product_description,
+                        attribute=field_meta.label,
+                    )
+                ]
                 if field_meta.options:
-                    example_prompt_parts.append("Options: " + ", ".join(field_meta.options))
+                    example_prompt_parts.append(
+                        "Options: " + ", ".join(field_meta.options)
+                    )
                 example_prompt_parts.append("Answer: " + example.output)
                 print(f"{ example_prompt_parts = }")
                 user_message_parts.append("\n".join(example_prompt_parts))
                 user_message_parts.append("")
 
-        user_message_parts.append(ENTRY_TEMPLATE.format(
-            product_description=product_description,
-            attribute=field_meta.label,
-        ))
+        user_message_parts.append(
+            ENTRY_TEMPLATE.format(
+                product_description=product_description,
+                attribute=field_meta.label,
+            )
+        )
 
         prompt = self.prompt_template.format(
             system_prompt=SYSTEM_PROMPT,
@@ -69,7 +85,9 @@ Attribute: {attribute}
         )
         return prompt
 
-    def extract(self, product_description: str, field_id: str, nb_examples: int = 3) -> str:
+    def extract(
+        self, product_description: str, field_id: str, nb_examples: int = 3
+    ) -> str:
         prompt = self.build_prompt(product_description, field_id, nb_examples)
         if len(prompt) > self.prompt_max_size:
             raise Exception(

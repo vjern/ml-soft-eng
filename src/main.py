@@ -11,12 +11,12 @@ logger = logging.getLogger(__file__)
 app = FastAPI()
 
 
-@app.get('/')
+@app.get("/")
 def liveness():
-    return 'llm-extractor v0.1.0'
+    return "llm-extractor v0.1.0"
 
 
-@app.post('/extract')
+@app.post("/extract")
 def post_extract(req: PostExtract.Request) -> PostExtract.Response:
     # identify extractor
     extractor = get_extractor(req.model)
@@ -28,7 +28,7 @@ def post_extract(req: PostExtract.Request) -> PostExtract.Response:
                 fields={
                     field_id: extractor.extract(task.product_description, field_id)
                     for field_id in task.fields_to_extract
-                }
+                },
             )
             for task in req.tasks
         ]
