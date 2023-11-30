@@ -26,7 +26,7 @@ def repack_result(
     with_prompt: bool = False,
 ) -> ExtractionResult:
     """
-    Adapt to ThreadPoolExecutor.map to
+    Utility function to adapt to ThreadPoolExecutor.map to
     - properly unpack the atomic task args (product desc and id of field to extract)
     - rebuild a result object that includes the prompt if the debug header is provided
     """
