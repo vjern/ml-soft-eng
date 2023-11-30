@@ -5,8 +5,8 @@ from pydantic import BaseModel
 from extractor import Models
 
 
-class ExtractionTask(BaseModel):
-    product_description: str
+class ExtractionTaskProduct(BaseModel):
+    description: str
     fields_to_extract: list[str]
 
 
@@ -20,7 +20,7 @@ class ExtractionResult(BaseModel):
 class PostExtract:
     class Request(BaseModel):
         model: Models
-        tasks: list[ExtractionTask]
+        products: list[ExtractionTaskProduct]
 
     class Response(BaseModel):
         results: list[ExtractionResult]

@@ -54,12 +54,12 @@ POST /extract
 Content-Type: application/json
 
 {
-    "models": "camellm",
-    "tasks": [
+    "model": "camellm",
+    "products": [
         {
             "product_description": "Lave linge 142x142cm",
             "fields_to_extract": [
-                "EF000032", "EF00042"
+                "EF000040", "EF000008"
             ]
         }
     ]

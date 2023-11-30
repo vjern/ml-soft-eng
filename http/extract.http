@@ -10,9 +10,9 @@ Content-Type: application/json
 
 {
     "model": "llama",
-    "tasks": [
+    "products": [
         {
-            "product_description": "Baignoire d'angle Geberit Bastia avec pieds: 142x142cm",
+            "description": "Baignoire d'angle Geberit Bastia avec pieds: 142x142cm",
             "fields_to_extract": [
                 "EF000040",
                 "EF000008",

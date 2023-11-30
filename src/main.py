@@ -47,9 +47,9 @@ def post_extract(req: Request, body: PostExtract.Request) -> PostExtract.Respons
     # We allow a debug header to be passed in to also return the generated prompts
     with_prompt = DEBUG_HEADER_SHOW_PROMPTS in req.headers
     split_tasks = (
-        (task.product_description, field_id)
-        for task in body.tasks
-        for field_id in task.fields_to_extract
+        (product.description, field_id)
+        for product in body.products
+        for field_id in product.fields_to_extract
     )
 
     executor = ThreadPoolExecutor()
