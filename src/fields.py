@@ -8,6 +8,10 @@ from collections import defaultdict
 Loading utilities and schemas for extraction field metadata & examples
 """
 
+# We make the choice to use this property as the main description of the product
+# We also only consider examples where this field is not null (and neither is the field value)
+DESC_PROPERTY = "LIBL_LIBELLE"
+
 
 @dataclass
 class Field:
@@ -41,12 +45,11 @@ def examples_from_json(
     coll = defaultdict(list)
     with open(path) as f:
         for example in json.load(f):
-            if include_all or example["field_value"] is not None:
+            if include_all or (example["field_value"] is not None and example[DESC_PROPERTY] is not None):
                 coll[example["field_name"]].append(
                     Example(
                         output=example["field_value"],
-                        # We make the choice to use this property as the main description of the product
-                        product_description=example["LIBL_LIBELLE"],
+                        product_description=example[DESC_PROPERTY],
                     )
                 )
     return coll

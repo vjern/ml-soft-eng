@@ -2,7 +2,7 @@ import random
 import time
 from enum import Enum
 
-from fields import fields_metadata_from_json, examples_from_json, Field, Example
+from fields import fields_metadata_from_json, examples_from_json
 
 FIELD_METAS = fields_metadata_from_json("data/fields.json")
 FIELD_EXAMPLES = examples_from_json("data/examples.json")
