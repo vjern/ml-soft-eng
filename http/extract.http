@@ -6,6 +6,7 @@ GET {{HOST}}
 
 POST {{HOST}}/extract
 Content-Type: application/json
+# X-Debug-Show-Prompts: 
 
 {
     "model": "llama",
