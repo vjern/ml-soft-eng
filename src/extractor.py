@@ -1,5 +1,5 @@
 import random
-from typing import Any
+import time
 from enum import Enum
 
 from fields import fields_metadata_from_json, examples_from_json, Field, Example
@@ -34,8 +34,8 @@ Attribute: {attribute}
         """
         Return placeholder
         """
-        print(f"Prompted {self = } prompt =")
-        print(prompt)
+        # Emulate latency in LLM response
+        time.sleep(2)
         return f"Answer {self.__class__.__name__}"
 
     def build_prompt(
