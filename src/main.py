@@ -17,7 +17,7 @@ app = FastAPI()
 
 @app.get("/")
 def liveness():
-    return "llm-extractor v0.1.0"
+    return "llm-extractor v0.2.0"
 
 
 def repack_result(
