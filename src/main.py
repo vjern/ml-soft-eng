@@ -2,31 +2,32 @@ import logging
 
 from fastapi import FastAPI
 
-import schema
+from schema import PostExtract, ExtractionResult
 from extractor import get_extractor
 
 
+logging.getLogger().setLevel(logging.INFO)
 logger = logging.getLogger(__file__)
 app = FastAPI()
 
 
 @app.get('/')
 def liveness():
-    return 'Hello world !'
+    return 'llm-extractor v0.1.0'
 
 
 @app.post('/extract')
-def extract(req: schema.Extraction.Request) -> schema.Extraction.Response:
+def post_extract(req: PostExtract.Request) -> PostExtract.Response:
     # identify extractor
     extractor = get_extractor(req.model)
-    print(f"{extractor = }")
-    return schema.Extraction.Response(
+    logger.info(f"{extractor = }")
+    return PostExtract.Response(
         results=[
-            schema.Extraction.Response.ExtractionResult(
-                task=task,
-                attributes={
-                    attr: extractor.extract(task.full_text(), attr)
-                    for attr in task.fields_to_extract
+            ExtractionResult(
+                product_description=task.product_description,
+                fields={
+                    field_id: extractor.extract(task.product_description, field_id)
+                    for field_id in task.fields_to_extract
                 }
             )
             for task in req.tasks
