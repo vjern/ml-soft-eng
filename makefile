@@ -1,7 +1,9 @@
 .ONESHELL:
 IMAGE=llm-extractor
 
-dev: kill build run
+dev: kill build run watch
+
+watch:
 	LATEST_CONTAINER=$$(docker ps -a | grep -w $(IMAGE) | head -n 1 | cut -d' ' -f1)
 	watch --color -n .2 "docker logs $$LATEST_CONTAINER 2>&1 | tail -n $$(($$(tput lines) - 3))"
 
