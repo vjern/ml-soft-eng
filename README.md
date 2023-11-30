@@ -48,7 +48,7 @@ Or check the examples in [http](http) (to be run with [VS Code Rest Client](http
 
 ### Liveness
 
-Check that your container is live by visiting http://localhost:8080.
+Check that your server is live by visiting http://localhost:8080.
 
 ```http
 GET /
