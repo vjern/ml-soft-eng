@@ -18,7 +18,7 @@ Then you can hit the following endpoints:
 
 ## Endpoints
 
-Or check the examples in [http](http) (to be run with VS Code Rest Client).
+Or check the examples in [http](http) (to be run with [VS Code Rest Client](https://marketplace.visualstudio.com/items?itemName=humao.rest-client)).
 
 ### Liveness
 
