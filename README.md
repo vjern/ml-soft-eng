@@ -9,11 +9,13 @@ Extract fields from product descriptions using a (mocked) LLM.
 3. Prompt generation using the model's prompt template and inclusion of examples by drawing from `examples.json`;
 4. Extraction tasks (1 description + 1 field) are parallelised using a thread pool (supposing we are actually hitting another service hosting the LLM).
 
+To see the prompts that were built & sent to the LLM, you can add the header `X-Debug-Show-Prompts` to requests sent to `POST /extract`. The prompt will be returned alongside `field_value`. They're returned as lists of strings for readability.
+
 ## Repo structure
 
 All code is in `src` and assumes it to be the working directory of the API.
 
-`http` contains HTTP request examples. You can run them against a hostname with various IDE extensions (eg [VS Code Rest Client](https://marketplace.visualstudio.com/items?itemName=humao.rest-client)).
+`http` contains HTTP request examples. You can run them against a hostname with various IDE extensions (eg [VS Code Rest Client](https://marketplace.visualstudio.com/items?itemName=humao.rest-client), it's like a very lean Postman).
 
 ## Build & Run
 
