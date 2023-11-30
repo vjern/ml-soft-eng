@@ -2,11 +2,29 @@
 
 GET {{HOST}}
 
-###
+### Minimal example (1 product, 1 field)
 
 POST {{HOST}}/extract
 Content-Type: application/json
-# X-Debug-Show-Prompts: 
+X-Debug-Show-Prompts:
+
+{
+    "model": "llama",
+    "products": [
+        {
+            "description": "Baignoire d'angle Geberit Bastia avec pieds: 142x142cm",
+            "fields_to_extract": [
+                "EF000040"
+            ]
+        }
+    ]
+}
+
+### Multiple products
+
+POST {{HOST}}/extract
+Content-Type: application/json
+# X-Debug-Show-Prompts:
 
 {
     "model": "llama",
@@ -22,6 +40,38 @@ Content-Type: application/json
                 "EF024897",
                 "EF000007",
                 "EF002169"
+            ]
+        },
+        {
+            "description": "Radiateur Connecté - Equateur 3 horizontal gris ardoise 1000W",
+            "fields_to_extract": [
+            "EF004900",
+            "EF000167",
+            "EF000955",
+            "EF000256",
+            "EF001471",
+            "EF000670",
+            "EF000008",
+            "EF000007",
+            "EF000040",
+            "EF000004",
+            "EF000049",
+            "EF005474",
+            "EF000010",
+            "EF000483"
+            ]
+        },
+        {
+            "description": "Cascade receveur ultra plat en céramique,120x90cm, à poser/encastrer, blanc VitrA Antislip, classification antidérapant PN24, bonde ø 90 mm, sans système d`écoulement. Important: Un decaissement dans le sol est nécessaire!",
+            "fields_to_extract": [
+            "EF024897",
+            "EF000007",
+            "EF000040",
+            "EF002169",
+            "EF000008",
+            "EF001438",
+            "EF001257",
+            "EF000010"
             ]
         }
     ]
